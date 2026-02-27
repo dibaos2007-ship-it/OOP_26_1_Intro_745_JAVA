@@ -1,5 +1,6 @@
 import java.util.List;
 
+
 public class Workshop {
     public static void main(String[] args) {
 
@@ -32,14 +33,23 @@ return mayor;
     public int[] tablaMultiplicar(int numero, int limite) {
         // TODO: Implementar el método para retornar la tabla de multiplicar del número dado.
         // Ejemplo: Si numero = 2 y limite = 5, el resultado debería ser [2, 4, 6, 8, 10].
-        return new int[0];
-    }
+int[] tab =new int [limite];
+for(int i=0; i< limite; i++) {
+tab[i] = numero *(i+1);
+}
+return tab;
+}
+     
+    
 
     // Método que calcula el factorial de un número entero
     public int factorial(int n) {
         // TODO: Implementar el método para calcular el factorial de un número entero.
         // Ejemplo: Si n = 5, el resultado debería ser 120.
         // Lanzar IllegalArgumentException si n es negativo.
+
+
+
         return 0;
     }
 
