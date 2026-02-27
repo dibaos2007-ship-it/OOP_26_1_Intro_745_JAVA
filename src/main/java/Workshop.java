@@ -47,11 +47,22 @@ return tab;
         // TODO: Implementar el método para calcular el factorial de un número entero.
         // Ejemplo: Si n = 5, el resultado debería ser 120.
         // Lanzar IllegalArgumentException si n es negativo.
+if (n<0){
+throw new IllegalArgumentException("EL nnumero no es positivo");
+}
+int res=1;
+
+for (int i=1;i<=n; i++) {
+
+res*=i;
+
+}
+
+return res;
+
+}
 
 
-
-        return 0;
-    }
 
     // Método que verifica si un número es primo
     public boolean esPrimo(int numero) {
