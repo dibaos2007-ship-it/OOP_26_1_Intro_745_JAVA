@@ -19,9 +19,10 @@ public class Workshop {
 
 int mayor=a;
 if(b>mayor) {
-mayor=b;}
+mayor=b;
+}
 if (c>mayor) {
-mayor=c;}
+mayor=c;
 }
 return mayor;
         
