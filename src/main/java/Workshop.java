@@ -62,20 +62,27 @@ return res;
 
 }
 
-
-
     // Método que verifica si un número es primo
     public boolean esPrimo(int numero) {
         // TODO: Implementar el método para verificar si un número es primo.
         // Ejemplo: Si numero = 7, el resultado debería ser true.
+if (numero <=1) {
         return false;
     }
+for (int i =2; i<numero; i++) {
+if (numero %i ==0) {
+return false;
+}
+}
+return true;
+
+}
 
     // Método que genera una serie de Fibonacci
     public int[] serieFibonacci(int n) {
         // TODO: Implementar el método para generar la serie de Fibonacci hasta el número n.
         // Ejemplo: Si n = 5, el resultado debería ser [0, 1, 1, 2, 3].
-        // Lanzar IllegalArgumentException si n es negativo.
+        // Lanzar "IllegalArgumentException" si n es negativo.
         return new int[0];
     }
 
