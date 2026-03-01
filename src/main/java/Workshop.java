@@ -274,22 +274,26 @@ return union;
         // TODO: Implementar el método para rotar un arreglo n posiciones.
         // Ejemplo: Si arreglo = [1, 2, 3, 4, 5] y posiciones = 2, el resultado debería ser [3, 4, 5, 1, 2].
 
-if (arreglo == null || arreglo.length == 0) {
+if (arreglo == null || arreglo.length ==0) {
              return new int[0];
          }
-         int ubiajus = posiciones % arreglo.length;
-         if (ubiajus < 0) {
-             ubiajus += arreglo.length;
-         }
-         int[] respuesta = new int[arreglo.length];
-         for (int i = 0; i < arreglo.length - ubiajus; i++) {
-             respuesta[i] = arreglo[ubiajus + i];
-         }
-         for (int j = 0; j < ubiajus; j++) {
-             respuesta[arreglo.length - ubiajus + j] = arreglo[j];
-         }
-         return respuesta;
+int n=arreglo.length;
+int ubiajus=posiciones%n;
+
+if(ubiajus<0){
+ubiajus +=n;
 }
+
+int [] respuesta=new int[n];
+
+System.arraycopy(arreglo,ubiajus,respuesta,0,n-ubiajus);
+System.arraycopy(arreglo,0,respuesta,n-ubiajus,ubiajus);
+
+return respuesta;
+}
+
+         
+
 
     // Método que cuenta los caracteres en una cadena
     public int contarCaracteres(String cadena) {
