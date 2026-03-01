@@ -229,8 +229,20 @@ return arregloord;
     public int[] eliminarDuplicados(int[] arreglo) {
         // TODO: Implementar el método para eliminar los duplicados de un arreglo.
         // Ejemplo: Si arreglo = [1, 2, 2, 3, 4, 4, 5], el resultado debería ser [1, 2, 3, 4, 5].
+
+if (arreglo==null||arreglo.length == 0){
         return new int[0];
     }
+
+int cunico=1;
+for(int i=1; i<arreglo.length; i++) {
+if(arreglo[i] !=arreglo[cunico-1]){
+arreglo[cunico]=arreglo[i];
+cunico++;}}
+int[] arreglado= new int[cunico];
+for (int j=0; j<cunico; j++){
+arreglado [j]=arreglo[j];}
+return arreglado;}
 
     // Método que combina dos arreglos en uno solo
     public int[] combinarArreglos(int[] arreglo1, int[] arreglo2) {
