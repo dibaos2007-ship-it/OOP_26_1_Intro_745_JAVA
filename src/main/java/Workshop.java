@@ -206,9 +206,24 @@ return arregloinv;
     public int[] ordenarArreglo(int[] arreglo) {
         // TODO: Implementar el método para ordenar un arreglo en orden ascendente.
         // Ejemplo: Si arreglo = [5, 4, 3, 2, 1], el resultado debería ser [1, 2, 3, 4, 5].
-
+if (arreglo==null||arreglo.length == 0){
         return new int[0];
     }
+
+int[]arregloord=new int[arreglo.length];
+for(int i=0; i<arregloord.length; i++) {
+arregloord[i]=arreglo[i];
+}
+
+for (int i=0;i<arregloord.length -1; i++){
+for (int j=0;j<arregloord.length -1-i; j++){
+if (arregloord[j]>arregloord[j+1]){
+int temp=arregloord[j];
+arregloord[j]=arregloord[j+1];
+arregloord[j+1]=temp;
+}}}
+return arregloord;
+}
 
     // Método que elimina los duplicados de un arreglo
     public int[] eliminarDuplicados(int[] arreglo) {
