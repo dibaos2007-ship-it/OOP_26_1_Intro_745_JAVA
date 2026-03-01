@@ -239,6 +239,7 @@ for(int i=1; i<arreglo.length; i++) {
 if(arreglo[i] !=arreglo[cunico-1]){
 arreglo[cunico]=arreglo[i];
 cunico++;}}
+
 int[] arreglado= new int[cunico];
 for (int j=0; j<cunico; j++){
 arreglado [j]=arreglo[j];}
@@ -247,9 +248,26 @@ return arreglado;}
     // Método que combina dos arreglos en uno solo
     public int[] combinarArreglos(int[] arreglo1, int[] arreglo2) {
         // TODO: Implementar el método para combinar dos arreglos en uno solo.
-        // Ejemplo: Si arreglo1 = [1, 2, 3, 4, 5] y arreglo2 = [6, 7, 8], el resultado debería ser [1, 2, 3, 4, 5, 6, 7, 8].
-        return new int[0];
-    }
+        // Ejemplo: Si arreglo1 = [1, 2, 3, 4, 5] y arreglo2 = [6, 7, 8], el resultado debería ser [1, 2, 3, 4, 5, 6, 7, 8]
+
+if (arreglo1==null){
+arreglo1=new int[0];}
+if (arreglo2==null){
+arreglo2=new int[0];}
+
+int[] union=new int[arreglo1.length+arreglo2.length];
+
+
+for (int i=0; i<arreglo1.length; i++) {
+union[i]=arreglo1[i];}
+
+for (int j=0; j<arreglo2.length; j++) {
+union[arreglo1.length+j]=arreglo2[j];}
+return union;
+}
+
+
+    
 
     // Método que rota un arreglo n posiciones
     public int[] rotarArreglo(int[] arreglo, int posiciones) {
