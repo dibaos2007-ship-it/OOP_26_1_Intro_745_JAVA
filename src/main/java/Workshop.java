@@ -176,9 +176,16 @@ return menor;
     public boolean buscarElemento(int[] arreglo, int elemento) {
         // TODO: Implementar el método para buscar un elemento en un arreglo.
         // Ejemplo: Si arreglo = [1, 2, 3, 4, 5] y elemento = 3, el resultado debería ser true.
+
+if (arreglo==null||arreglo.length == 0){
         return false;
     }
 
+for(int num:arreglo){
+if(num==elemento) {
+return true;}}
+return false;
+}
     // Método que invierte un arreglo
     public int[] invertirArreglo(int[] arreglo) {
         // TODO: Implementar el método para invertir un arreglo.
