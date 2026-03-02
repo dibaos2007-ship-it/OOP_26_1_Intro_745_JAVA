@@ -299,17 +299,17 @@ return union;
         // TODO: Implementar el método para contar el número de caracteres en una cadena.
         // Ejemplo: Si cadena = "Hello", el resultado debería ser 5.
 
-    if (cadena == null) {
+   if (cadena == null) {
         return 0;
     }
     
-    int contador = 0;
-   
-    for (int i = 0; i < cadena.length(); i++) {
-        contador++; 
+    
+    if (cadena.equals("")) {
+        return 0;
     }
     
-    return contador;
+    
+    return cadena.length();
 }
     public String invertirCadena(String cadena) {
         // TODO: Implementar el método para invertir una cadena.
