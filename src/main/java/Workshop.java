@@ -308,12 +308,11 @@ return union;
     public String invertirCadena(String cadena) {
         // TODO: Implementar el método para invertir una cadena.
         // Ejemplo: Si cadena = "Hello", el resultado debería ser "olleH".
-  if (cadena == null || cadena.isEmpty()) {
-        return cadena;
+   if (cadena == null || cadena.isEmpty()) {
+        return ""; 
     }
     return new StringBuilder(cadena).reverse().toString();
-}
-    
+}  
 
     // Método que verifica si una cadena es un palíndromo
     public boolean esPalindromo(String cadena) {
