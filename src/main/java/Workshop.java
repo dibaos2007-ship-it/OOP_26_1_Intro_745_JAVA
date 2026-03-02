@@ -302,7 +302,6 @@ return union;
    if (cadena == null) {
         return 0;
     }
-    
     return cadena.length();
 }
     public String invertirCadena(String cadena) {
