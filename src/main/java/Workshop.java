@@ -299,7 +299,7 @@ return union;
         // TODO: Implementar el método para contar el número de caracteres en una cadena.
         // Ejemplo: Si cadena = "Hello", el resultado debería ser 5.
 
-if (cadena==null) {
+if (cadena==null || cadena.isEmpty()) {
 return 0;
 }
 return cadena.length();
