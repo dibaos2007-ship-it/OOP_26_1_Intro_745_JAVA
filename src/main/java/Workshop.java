@@ -300,10 +300,10 @@ return union;
         // Ejemplo: Si cadena = "Hello", el resultado debería ser 5.
 
 if (cadena == null || cadena.isEmpty()) {
-        return 0;
-    }
+return 0;
+}
    
-    return cadena.length();
+return cadena.length();
 }
     // Método que invierte una cadena
     public String invertirCadena(String cadena) {
