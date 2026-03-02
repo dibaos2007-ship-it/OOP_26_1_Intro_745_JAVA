@@ -275,26 +275,24 @@ return union;
         // Ejemplo: Si arreglo = [1, 2, 3, 4, 5] y posiciones = 2, el resultado debería ser [3, 4, 5, 1, 2].
 
 
-     if (arreglo == null || arreglo.length == 0) {
-         return arreglo;
-     }
-   
-     int n = arreglo.length;
-     posiciones = posiciones % n;
-     if (posiciones < 0) {
-         posiciones += n; 
-     }
-     
-     int[] resultado = new int[n];
-     
-     System.arraycopy(arreglo, posiciones, resultado, 0, n - posiciones);
-     
-     System.arraycopy(arreglo, 0, resultado, n - posiciones, posiciones);
-     
-     return resultado;
- }
-         
-
+    if (arreglo == null || arreglo.length == 0) {
+        return new int[0]; 
+    }
+    
+    int n = arreglo.length;
+    posiciones = posiciones % n;
+    if (posiciones < 0) {
+        posiciones += n;
+    }
+ 
+    posiciones = n - posiciones; 
+    
+    int[] resultado = new int[n];
+    System.arraycopy(arreglo, posiciones, resultado, 0, n - posiciones);
+    System.arraycopy(arreglo, 0, resultado, n - posiciones, posiciones);
+    
+    return resultado;
+}
 
     // Método que cuenta los caracteres en una cadena
     public int contarCaracteres(String cadena) {
