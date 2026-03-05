@@ -294,28 +294,35 @@ return union;
     return resultado;
 }
 
-    // Método que cuenta los caracteres en una cadena
-    public int contarCaracteres(String cadena) {
-        // TODO: Implementar el método para contar el número de caracteres en una cadena.
-        // Ejemplo: Si cadena = "Hello", el resultado debería ser 5.
-
-if(cadena==null){
-return 0;
+// Método que cuenta los caracteres en una cadena
+public int contarCaracteres(String cadena) {
+    // TODO: Implementar el método para contar el número de caracteres en una cadena.
+    // Ejemplo: Si cadena = "Hello", el resultado debería ser 5.
+    if (cadena == null) {
+        return 0;
+    }
+    return cadena.length();
 }
-return cadena.length();
-}  
-
 
     public String invertirCadena(String cadena) {
         // TODO: Implementar el método para invertir una cadena.
         // Ejemplo: Si cadena = "Hello", el resultado debería ser "olleH".
+
+if (cadena==null){
+return "";
+}
+StringBuilder sb=new StringBuilder(cadena);
+return sb.reverse().toString();
+}
   
     // Método que verifica si una cadena es un palíndromo
-    public boolean esPalindromo(String cadena) {
+    //public boolean esPalindromo(String cadena) {
         // TODO: Implementar el método para verificar si una cadena es un palíndromo.
         // Ejemplo: Si cadena = "madam", el resultado debería ser true.
-        return false;
-    }
+
+//if (cadena == null||cadena.isEmpty()){
+      //  return false;
+    
 
     // Método que cuenta el número de palabras en una cadena
     public int contarPalabras(String cadena) {
