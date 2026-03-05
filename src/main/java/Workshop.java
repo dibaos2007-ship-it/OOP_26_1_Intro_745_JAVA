@@ -316,13 +316,17 @@ return sb.reverse().toString();
 }
   
     // Método que verifica si una cadena es un palíndromo
-    //public boolean esPalindromo(String cadena) {
+    public boolean esPalindromo(String cadena) {
         // TODO: Implementar el método para verificar si una cadena es un palíndromo.
         // Ejemplo: Si cadena = "madam", el resultado debería ser true.
 
-//if (cadena == null||cadena.isEmpty()){
-      //  return false;
-    
+if (cadena == null || cadena.isEmpty()) {
+        return false;
+    }
+    String cadenaLimpia = cadena.replaceAll("\\s+", "").toLowerCase();
+    String invertida = new StringBuilder(cadenaLimpia).reverse().toString();
+    return cadenaLimpia.equals(invertida);
+} 
 
     // Método que cuenta el número de palabras en una cadena
     public int contarPalabras(String cadena) {
