@@ -299,21 +299,17 @@ return union;
         // TODO: Implementar el método para contar el número de caracteres en una cadena.
         // Ejemplo: Si cadena = "Hello", el resultado debería ser 5.
 
-   if (cadena == null) {
-        return 0;
-    }
-
-    return cadena.length();
+if(cadena==null){
+return 0;
 }
+return cadena.length();
+}  
+
+
     public String invertirCadena(String cadena) {
         // TODO: Implementar el método para invertir una cadena.
         // Ejemplo: Si cadena = "Hello", el resultado debería ser "olleH".
-   if (cadena == null || cadena.isEmpty()) {
-        return ""; 
-    }
-    return new StringBuilder(cadena).reverse().toString();
-}  
-
+  
     // Método que verifica si una cadena es un palíndromo
     public boolean esPalindromo(String cadena) {
         // TODO: Implementar el método para verificar si una cadena es un palíndromo.
