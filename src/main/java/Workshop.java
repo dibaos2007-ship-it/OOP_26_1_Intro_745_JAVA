@@ -298,15 +298,21 @@ return union;
 public int contarCaracteres(String cadena) {
     // TODO: Implementar el método para contar el número de caracteres en una cadena.
     // Ejemplo: Si cadena = "Hello", el resultado debería ser 5.
+  if (cadena == null) {
+        return 0;
+    }
 
-if (cadena == null) return 0;
-    return cadena.length(); 
+    int contador = 0;
+    for (int i = 0; i < cadena.length(); i++) {
+        contador++; 
+    }
+    return contador;
 }
+
 
     public String invertirCadena(String cadena) {
         // TODO: Implementar el método para invertir una cadena.
         // Ejemplo: Si cadena = "Hello", el resultado debería ser "olleH".
-public String invertirCadena(String cadena) {
     if (cadena == null) return null;
     StringBuilder sb = new StringBuilder(cadena);
     return sb.reverse().toString(); 
