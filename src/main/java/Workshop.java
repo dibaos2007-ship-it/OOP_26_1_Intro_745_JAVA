@@ -299,23 +299,17 @@ public int contarCaracteres(String cadena) {
     // TODO: Implementar el método para contar el número de caracteres en una cadena.
     // Ejemplo: Si cadena = "Hello", el resultado debería ser 5.
 
- if (cadena == null) return 0;
-    int contador = 0;
-    for (int i = 0; i < cadena.length(); i++) {
-        contador++;
-    }
-    return contador;
+if (cadena == null) return 0;
+    return cadena.length(); 
 }
-   
 
     public String invertirCadena(String cadena) {
         // TODO: Implementar el método para invertir una cadena.
         // Ejemplo: Si cadena = "Hello", el resultado debería ser "olleH".
-String invertir = "";
-    for (int i = cadena.length() - 1; i >= 0; i--) {
-        invertir += cadena.charAt(i);
-    }
-    return invertir;
+public String invertirCadena(String cadena) {
+    if (cadena == null) return null;
+    StringBuilder sb = new StringBuilder(cadena);
+    return sb.reverse().toString(); 
 }
     // Método que verifica si una cadena es un palíndromo
     public boolean esPalindromo(String cadena) {
