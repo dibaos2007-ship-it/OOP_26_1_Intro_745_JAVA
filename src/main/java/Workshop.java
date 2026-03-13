@@ -453,22 +453,22 @@ return resultado.toString();
         // - Tijera vence a Papel y Lagarto
         // - Lagarto vence a Spock y Papel
         // - Spock vence a Tijera y Piedra
-String[] opciones = {"Piedra", "Papel", "Tijera", "Lagarto", "Spock"};
-     int indicealeatorio = (int) (Math.random() * 5);
-     String eleccionpepe = opciones[indicealeatorio];
-     
-     if (eleccionUsuario.equals(eleccionpepe)) {
-         return "Empate";
-     }
-     
+ String[] opciones = {"Piedra", "Papel", "Tijera", "Lagarto", "Spock"};
+    int indicealeatorio = (int) (Math.random() * 5);
+    String eleccionpepe = opciones[indicealeatorio];
+
+if (eleccionUsuario.equals(eleccionpepe)) {
+return "Empate";
+}
+
 boolean usuariogana = false;
-     
+
 if (eleccionUsuario.equals("Piedra")) {
 if (eleccionpepe.equals("Tijera") || eleccionpepe.equals("Lagarto")) {
 usuariogana = true;
 }
 } else if (eleccionUsuario.equals("Papel")) {
-if (eleccionpepe.equals("Piedra") || eleccionpepe.equals("Spock")) {
+ if (eleccionpepe.equals("Piedra") || eleccionpepe.equals("Spock")) {
 usuariogana = true;
 }
 } else if (eleccionUsuario.equals("Tijera")) {
@@ -481,14 +481,15 @@ usuariogana = true;
 }
 } else if (eleccionUsuario.equals("Spock")) {
 if (eleccionpepe.equals("Tijera") || eleccionpepe.equals("Piedra")) {
-usuariogana = true;
-}}
+ usuariogana = true;
+}
+}
+
 if (usuariogana) {
 return "Ganaste";
 } else {
 return "Perdiste";
 }}
-
         // El método debe retornar un mensaje indicando el resultado del juego.
         // Ejemplo: Si la eleccionUsuario es "Piedra", el resultado podría ser "Ganaste" o "Perdiste" dependiendo de la elección de la computadora.
        //return "";
