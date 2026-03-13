@@ -412,37 +412,87 @@ return resultado.toString();
     public int buscarSubcadena(String cadena, String subcadena) {
         // TODO: Implementar el método para buscar una subcadena en una cadena y retornar su índice.
         // Ejemplo: Si cadena = "Hello world" y subcadena = "world", el resultado debería ser 6.
-        return -1;
-    }
+int n = cadena.length();
+int m = subcadena.length();
 
+for (int i = 0; i <= n - m; i++) {
+boolean encontrado = true;
+        
+for (int j = 0; j < m; j++) {
+if (cadena.charAt(i + j) != subcadena.charAt(j)) {
+encontrado = false;
+break;
+}}
+if (encontrado) {
+return i;
+}}
+return -1;
+}
+   
     // Método que valida un correo electrónico
     public boolean validarCorreoElectronico(String correo) {
         // TODO: Implementar el método para validar un correo electrónico.
         // Ejemplo: Si correo = "test@example.com", el resultado debería ser true.
-        return false;
-    }
+  int posicionarroba = correo.indexOf('@');
+  int posicionpunto = correo.lastIndexOf('.');
+if (posicionarroba <= 0) {
+return false;
+}
 
+    
+if (posicionpunto <= posicionarroba + 1) {
+return false;
+}
+
+    
+if (posicionpunto == correo.length() - 1) {
+return false;
+}
+
+return true;
+}
+     
     // Método que calcula el promedio de una lista de números
-
     public double promedioLista(List<Integer> lista) {
         // TODO: Implementar el método para calcular el promedio de una lista de números.
         // Ejemplo: Si lista = [1, 2, 3, 4, 5], el resultado debería ser 3.0.
-        return 0.0;
-    }
-
+double suma = 0;
+for (int i = 0; i < lista.size(); i++) {
+suma = suma + lista.get(i);
+}
+return suma / lista.size();
+}
     // Método que convierte un número en su representación binaria
     public String convertirABinario(int numero) {
         // TODO: Implementar el método para convertir un número en su representación binaria.
         // Ejemplo: Si numero = 10, el resultado debería ser "1010".
-        return "";
-    }
-
+if (numero == 0) {
+return "0";
+}
+String binario = "";
+while (numero > 0) {
+int residuo = numero % 2;
+binario = residuo + binario;
+numero = numero / 2;
+}
+return binario;
+}
     // Método que convierte un número en su representación hexadecimal
     public String convertirAHexadecimal(int numero) {
         // TODO: Implementar el método para convertir un número en su representación hexadecimal.
         // Ejemplo: Si numero = 255, el resultado debería ser "FF".
-        return "";
-    }
+if (numero == 0) {
+return "0";
+}
+String hexadecimal = "";
+char[] digitos = {'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
+while (numero > 0) {
+int residuo = numero % 16;
+hexadecimal = digitos[residuo] + hexadecimal;
+numero = numero / 16;
+}
+return hexadecimal;
+}
 
     // Método para el juego de piedra, papel, tijera, lagarto, Spock
     public String jugarPiedraPapelTijeraLagartoSpock(String eleccionUsuario) {
@@ -490,6 +540,8 @@ return "Ganaste";
 } else {
 return "Perdiste";
 }}
+//no se que me fallo, ya intente todos los medios que me sabia, revisar luego
+
         // El método debe retornar un mensaje indicando el resultado del juego.
         // Ejemplo: Si la eleccionUsuario es "Piedra", el resultado podría ser "Ganaste" o "Perdiste" dependiendo de la elección de la computadora.
        //return "";
