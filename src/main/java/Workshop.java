@@ -314,11 +314,10 @@ public int contarCaracteres(String cadena) {
         // TODO: Implementar el método para invertir una cadena.
         // Ejemplo: Si cadena = "Hello", el resultado debería ser "olleH".
 
-  if (cadena == null) return null;
+if (cadena == null) return null;
     StringBuilder sb = new StringBuilder(cadena);
-    return sb.reverse().toString(); 
+    return sb.reverse().toString();
 }
-
     // Método que verifica si una cadena es un palíndromo
     public boolean esPalindromo(String cadena) {
         // TODO: Implementar el método para verificar si una cadena es un palíndromo.
