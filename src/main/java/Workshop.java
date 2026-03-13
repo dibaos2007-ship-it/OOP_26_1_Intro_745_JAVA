@@ -315,8 +315,8 @@ public int contarCaracteres(String cadena) {
         // Ejemplo: Si cadena = "Hello", el resultado debería ser "olleH".
 
 if (cadena == null) return null;
-    StringBuilder sb = new StringBuilder(cadena);
-    return sb.reverse().toString();
+StringBuilder sb = new StringBuilder(cadena);
+return sb.reverse().toString();
 }
     // Método que verifica si una cadena es un palíndromo
     public boolean esPalindromo(String cadena) {
@@ -503,7 +503,7 @@ return "Invalid Date";
 }
     if ((month == 3 && day >= 21) || (month == 4 && day <= 19)) return "Aries";
     if ((month == 4 && day >= 20) || (month == 5 && day <= 20)) return "Tauro";
-    if ((month == 5 && day >= 21) || (month == 6 && day <= 20)) return "Geminís";
+    if ((month == 5 && day >= 21) || (month == 6 && day <= 20)) return "Gemini";
     if ((month == 6 && day >= 21) || (month == 7 && day <= 22)) return "Cáncer";
     if ((month == 7 && day >= 23) || (month == 8 && day <= 22)) return "Leo";
     if ((month == 8 && day >= 23) || (month == 9 && day <= 22)) return "Virgo";
