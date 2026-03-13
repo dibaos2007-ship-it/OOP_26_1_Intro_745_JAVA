@@ -453,35 +453,41 @@ return resultado.toString();
         // - Tijera vence a Papel y Lagarto
         // - Lagarto vence a Spock y Papel
         // - Spock vence a Tijera y Piedra
-String eleccionPepe = "Piedra";
- 
-if (eleccionUsuario.equals(eleccionPepe)) {
- return "Empate";
-}
-
+String[] opciones = {"Piedra", "Papel", "Tijera", "Lagarto", "Spock"};
+     int indicealeatorio = (int) (Math.random() * 5);
+     String eleccionpepe = opciones[indicealeatorio];
+     
+     if (eleccionUsuario.equals(eleccionpepe)) {
+         return "Empate";
+     }
+     
+boolean usuariogana = false;
+     
 if (eleccionUsuario.equals("Piedra")) {
-if (eleccionPepe.equals("Tijera") || eleccionPepe.equals("Lagarto")) {
-return "Ganaste";
-}}
-if (eleccionUsuario.equals("Papel")) {
-if (eleccionPepe.equals("Piedra") || eleccionPepe.equals("Spock")) {
-return "Ganaste";
-}}
-if (eleccionUsuario.equals("Tijera")) {
-if (eleccionPepe.equals("Papel") || eleccionPepe.equals("Lagarto")) {
-return "Ganaste";
-}}
-if (eleccionUsuario.equals("Lagarto")) {
-if (eleccionPepe.equals("Spock") || eleccionPepe.equals("Papel")) {
-return "Ganaste";
-}}
-if (eleccionUsuario.equals("Spock")) {
-if (eleccionPepe.equals("Tijera") || eleccionPepe.equals("Piedra")) {
-return "Ganaste";
-}}
-return "Perdiste";
+if (eleccionpepe.equals("Tijera") || eleccionpepe.equals("Lagarto")) {
+usuariogana = true;
 }
-
+} else if (eleccionUsuario.equals("Papel")) {
+if (eleccionpepe.equals("Piedra") || eleccionpepe.equals("Spock")) {
+usuariogana = true;
+}
+} else if (eleccionUsuario.equals("Tijera")) {
+if (eleccionpepe.equals("Papel") || eleccionpepe.equals("Lagarto")) {
+usuariogana = true;
+}
+} else if (eleccionUsuario.equals("Lagarto")) {
+if (eleccionpepe.equals("Spock") || eleccionpepe.equals("Papel")) {
+usuariogana = true;
+}
+} else if (eleccionUsuario.equals("Spock")) {
+if (eleccionpepe.equals("Tijera") || eleccionpepe.equals("Piedra")) {
+usuariogana = true;
+}}
+if (usuariogana) {
+return "Ganaste";
+} else {
+return "Perdiste";
+}}
 
         // El método debe retornar un mensaje indicando el resultado del juego.
         // Ejemplo: Si la eleccionUsuario es "Piedra", el resultado podría ser "Ganaste" o "Perdiste" dependiendo de la elección de la computadora.
