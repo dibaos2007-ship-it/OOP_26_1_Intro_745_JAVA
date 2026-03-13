@@ -313,9 +313,15 @@ public int contarCaracteres(String cadena) {
     public String invertirCadena(String cadena) {
         // TODO: Implementar el método para invertir una cadena.
         // Ejemplo: Si cadena = "Hello", el resultado debería ser "olleH".
-    if (cadena == null) return null;
-    StringBuilder sb = new StringBuilder(cadena);
-    return sb.reverse().toString(); 
+
+    if (cadena == null) {
+        return null;
+    }
+    String invertida = "";
+    for (int i = cadena.length() - 1; i >= 0; i--) {
+        invertida += cadena.charAt(i);
+    }
+    return invertida;
 }
     // Método que verifica si una cadena es un palíndromo
     public boolean esPalindromo(String cadena) {
@@ -498,7 +504,7 @@ break;
 default: maxdays=31; break;
 }
 if (day<1 || day> maxdays){
-return "invalid Date";
+return "Invalid Date";
 }
     if ((month == 3 && day >= 21) || (month == 4 && day <= 19)) return "Aries";
     if ((month == 4 && day >= 20) || (month == 5 && day <= 20)) return "Tauro";
