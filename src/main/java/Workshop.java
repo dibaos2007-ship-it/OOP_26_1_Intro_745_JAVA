@@ -321,11 +321,30 @@ public int contarCaracteres(String cadena) {
     public boolean esPalindromo(String cadena) {
         // TODO: Implementar el método para verificar si una cadena es un palíndromo.
         // Ejemplo: Si cadena = "madam", el resultado debería ser true.
+String cadenau = cadena.replaceAll("\\s+", "").toLowerCase();
+     
 
-        return false; 
-    }
-   
+if (cadenau.length() <= 1) {
+         return true;}
+    
+char[] caracteres = cadenau.toCharArray();
+     
+int inicio = 0;
+int fin = caracteres.length - 1;
+     
+while (inicio < fin) {
+if (caracteres[inicio] != caracteres[fin]) {
+             
+return false;}
+     
+inicio++;
+fin--;
+ }
+     
+     return true;
+ }
 
+ 
 
     // Método que cuenta el número de palabras en una cadena
     public int contarPalabras(String cadena) {
@@ -360,8 +379,33 @@ public int contarCaracteres(String cadena) {
     public String reemplazarSubcadena(String cadena, String antiguaSubcadena, String nuevaSubcadena) {
         // TODO: Implementar el método para reemplazar una subcadena en una cadena por otra subcadena.
         // Ejemplo: Si cadena = "Hello Java", antiguaSubcadena = "Java", y nuevaSubcadena = "world", el resultado debería ser "Hello world".
-        return "";
-    }
+if (cadena == null || antiguaSubcadena == null || nuevaSubcadena == null || antiguaSubcadena.isEmpty()) {
+        return cadena;}
+
+int largocadena = cadena.length();
+int largosub = antiguaSubcadena.length();
+StringBuilder resultado = new StringBuilder();
+int i = 0;
+
+while (i < largocadena) {
+boolean coincide = false;
+
+if (i + largosub <= largocadena) {
+coincide = true;
+for (int j = 0; j < largosub; j++) {
+if (cadena.charAt(i + j) != antiguaSubcadena.charAt(j)) {
+coincide = false;
+break;
+}}}
+if (coincide) {
+resultado.append(nuevaSubcadena);
+i += largosub;
+} else {
+resultado.append(cadena.charAt(i));
+i++;
+}}
+return resultado.toString();
+}
 
     // Método que busca una subcadena en una cadena y retorna su índice
     public int buscarSubcadena(String cadena, String subcadena) {
@@ -442,6 +486,20 @@ return Math.PI * Math.pow(radio, 2);
 }
 
     public String zoodiac(int day, int month) {
+
+if(month<1 || month>12) {
+return "Invalid Date";
+}
+int maxdays;
+switch(month){
+case 2: maxdays=28; break;
+case 4: case 6: case 9: case 11: maxdays=30;
+break;
+default: maxdays=31; break;
+}
+if (day<1 || day> maxdays){
+return "invalid Date";
+}
     if ((month == 3 && day >= 21) || (month == 4 && day <= 19)) return "Aries";
     if ((month == 4 && day >= 20) || (month == 5 && day <= 20)) return "Tauro";
     if ((month == 5 && day >= 21) || (month == 6 && day <= 20)) return "Geminís";
@@ -453,7 +511,7 @@ return Math.PI * Math.pow(radio, 2);
     if ((month == 11 && day >= 22) || (month == 12 && day <= 21)) return "Sagitario";
     if ((month == 12 && day >= 22) || (month == 1 && day <= 19)) return "Capricornio";
     if ((month == 1 && day >= 20) || (month == 2 && day <= 18)) return "Acuario";
-    return "Aries";
+    return "Invalid Date";
 }
 
  }
