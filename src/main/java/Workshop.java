@@ -135,21 +135,20 @@ return(double)suma/arreglo.length;
     public int encontrarElementoMayor(int[] arreglo) {
         // TODO: Implementar el método para encontrar el elemento mayor en un arreglo.
         // Ejemplo: Si arreglo = [1, 2, 3, 4, 5], el resultado debería ser 5.
-if (arreglo == null|| arreglo.length == 0){
-return 0;
-    }
-int mayor=arreglo[0];
-for(int i=1; i<arreglo.length/2; i++) {
-if(arreglo[i]>mayor) {
-mayor=arreglo[i];}}
-int indice=arreglo.length/2;
-while(indice<arreglo.length){
-if(arreglo[indice]>mayor){
-mayor=arreglo[indice];}
-indice++;}
-return mayor;
-}
 
+    if (arreglo == null || arreglo.length == 0) {
+        return 0;
+    }
+    
+    int mayor = arreglo[0];
+    
+    for (int i = 1; i < arreglo.length; i++) {
+        if (arreglo[i] > mayor) {
+            mayor = arreglo[i];
+        }
+    }
+    return mayor;
+}
     // Método que encuentra el elemento menor en un arreglo
     public int encontrarElementoMenor(int[] arreglo) {
         // TODO: Implementar el método para encontrar el elemento menor en un arreglo.
@@ -598,7 +597,7 @@ return "Player 1";
     
 
     public double areaCirculo(double radio) {
-return Math.PI * Math.pow(radio, 2);
+return Math.PI * Math.pow(radio, 2);//test esta mal
 }
 
     public String zoodiac(int day, int month) {
