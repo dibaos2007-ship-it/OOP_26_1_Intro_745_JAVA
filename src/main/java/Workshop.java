@@ -153,21 +153,14 @@ return(double)suma/arreglo.length;
     public int encontrarElementoMenor(int[] arreglo) {
         // TODO: Implementar el método para encontrar el elemento menor en un arreglo.
         // Ejemplo: Si arreglo = [1, 2, 3, 4, 5], el resultado debería ser 1.
-if (arreglo == null|| arreglo.length == 0){
-return 0;
+    if (arreglo == null || arreglo.length == 0) return 0;
+    
+    int menor = arreglo[0];
+    for (int num : arreglo) {
+        if (num < menor) menor = num;
     }
-int menor=arreglo[0];
-for(int i=1; i<arreglo.length/2; i++) {
-if(arreglo[i]<menor) {
-menor=arreglo[i];}}
-int indice=arreglo.length/2;
-while(indice<arreglo.length){
-if(arreglo[indice]<menor){
-menor=arreglo[indice];}
-indice++;}
-return menor;
+    return menor;
 }
-
 
   
 
